@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>Bootstrap 101 Template</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
+    <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="css/top.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        .top-tab{
+            border-bottom: 1px solid #ddd;
+            margin-bottom: 25px;
+        }
+       .top-tab .tab-content{
+           background:url(images/friendly_03.png) no-repeat;
+           background-size: 100% auto;
+       }
+       .progress2{
+           height: 70px;
+           width: 460px;
+           margin: 0 auto;
+       }
+       #container .dot1{
+           display: inline-block;
+           width: 18px;
+           height: 18px;
+           background: url(images/dot1.jpg) no-repeat center center;
+           position: relative;
+           top: 4px;
+           margin-right: 8px;
+       }
+       #container .seller  .list-content{
+           overflow: hidden;
+           margin-bottom: 26px;
+       }
+       #container .seller  .list-content li:hover{
+         background-color: #f1f1f1;
+         cursor: pointer;
+       }
+       #container .seller>div:first-child{
+           margin-bottom: 26px;
+       }
+       #container .seller .list-content li{
+           height: 65px;
+           line-height: 40px;
+           font-size: 14px;
+           color: #4d525d;
+           position: relative;
+       }
+       #container .seller .list-content .stop{
+           display: inline-block;
+           width: 30px;
+           height: 16px;
+           line-height: 16px;
+           text-align: center;
+           background-color: #56aafd;
+           color: #fff;
+           margin-right: 8px;
+           font-size: 12px;
+       }
+       #container .seller  .list-content input[type=checkbox]{
+           position: absolute;
+           width: 20px;
+           height: 20px;
+           left: 40px;
+           top: 5px;
+       }
+       #container .seller .list-content li:first-child{
+           height: 40px;
+           line-height: 40px;
+           background-color: #e2edf8;
+       }
+       #container .seller .list-content li.detail{
+           padding-top: 4px;
+       }
+       #container .seller .list-content li.detail:hover{
+           background-color: #f1f1f1;
+       }
+       #container .seller .list-content li.detail>span:first-child{
+           padding-left: 60px;
+       }
+       #container .seller .list-content li:first-child{
+           font-size: 14px;
+           color: #1b1b1b;
+           border-bottom: 1px solid #ddd;
+       }
+       #container .seller .list-content li:nth-child(2){
+           font-size: 14px;
+           color: #1b1b1b;
+           border-bottom: 1px dashed #ddd;
+
+       }
+       #container .seller .cailing{
+         color: #ff6900;
+       }
+       #container .seller .cailing span{
+           display: inline-block;
+           width: 48px;
+           height: 18px;
+           line-height: 18px;
+           text-align: center;
+           color: #ff6900;
+           border: 1px solid #ff6900;
+       }
+       #container .seller .max-number{
+           position: relative;
+       }
+       #container .seller .max-number span{
+           position: absolute;
+           top: 26px;
+           left: 50px;
+           color: #898989;
+           font-size: 12px;
+       }
+       #container .seller #counted-num{
+           height: 50px;
+           line-height: 50px;
+           background-color: #f7f8f8;
+
+       }
+       #container .seller #counted-num button{
+           margin-left: 48px;
+           width: 114px;
+           background-color: #ff6900;
+           color: #fff;
+           text-align: center;
+           height: 50px;
+           line-height: 50px;
+           border: 0;
+       }
+       #container .seller #counted-num span{
+           margin-left: 80px;
+       }
+       #container .seller .clear button{
+           color: #898988;
+           font-size: 14px;
+           width: 90px;
+           height: 30px;
+           text-align: center;
+           margin-right: 22px;
+       }
+       #container .seller .clear button:last-child{
+           width: 110px;
+       }
+       input[type=number]{
+           width: 80px;
+           height: 30px;
+       }
+    </style>
+  </head>
+  <body>
+    <div class="wrap-top">
+        <div>
+            <div class="left pull-left">
+                <span class="login">登录</span>
+                <span class="regist">免费注册</span>
+            </div>
+            <div class="list right pull-right">
+                <span>微信商城</span>
+                <span>帮助中心</span>
+                <span>在线客服</span>
+                <span>客服热线:400-168-8888 ( 8 :00 - 17:00 )</span>
+            </div>
+        </div>
+    </div>
+    <div class="top-nav row">
+        <div class="logo left pull-left col-lg-4">
+            天宝
+        </div>
+        <div class="right pull-right col-lg-8">
+            <div class="row cart">
+                <button type="button pull-right" class="cart-btn btn btn-default pull-right" aria-label="Left Align">
+                        <span class="" aria-hidden="true">购物车</span>
+                        <span class="num-dot">7</span>
+                </button>
+                <div class="input-group col-lg-6 pull-right">
+                    <input type="text" class="form-control" placeholder="请输入品名 材质 规格  钢厂等搜索,例如 : 冷轧卷1.0*1250C" aria-describedby="basic-addon2">
+                    <span class="input-group-addon" id="basic-addon2">搜索</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="top-tab">
+        <ul class="nav nav-pills">
+            <li role="presentation" class="active"><a href="#">全部商品分类</a></li>
+            <li role="presentation"><a href="#">首页</a></li>
+            <li role="presentation"><a href="#">现货商城</a></li>
+            <li role="presentation"><a href="#">在线订货</a></li>
+            <li role="presentation"><a href="#">行情资讯</a></li>
+        </ul>
+    </div>
+    <div class="progress2 text-center">
+        <img src="images/progress2.jpg" alt="">
+    </div>
+    <div id="container">
+        <div class="seller">
+            <div>
+                <span class="dot1"></span>
+                <span class="head">卖方：湖南华菱电子商务有限公司</span>
+            </div>
+            <div class="list-content">
+                <ul>
+                    <li class="row">
+                        <span class="col-lg-5 text-center"><input type="checkbox" id="all">商品描述</span>
+                        <span class="col-lg-1 text-center">货期</span>
+                        <span class="col-lg-1 text-center">千支价</span>
+                        <span class="col-lg-2 text-center">采购数量</span>
+                        <span class="col-lg-2 text-center">金额小计</span>
+                        <span class="col-lg-1 text-center">操作</span>
+                    </li>
+                    <li class="detail row">
+                        <span class="col-lg-5 text-center"><input type="checkbox" class="single"><span class="stop">暂停</span> 六角螺栓 M8×10 (P1.25) 达力强 A2-70 洗白 100支/箱 </span>
+                        <span class="col-lg-1 text-center">现货</span>
+                        <span class="col-lg-1 text-center">3,000.00</span>
+                        <span class="col-lg-2 text-center max-number">
+                            <input type="number" placeholder="1.000"> 支
+                            <span>200支起订</span>
+                        </span>
+                        <span class="col-lg-2 text-center cailing">3,000.00</span>
+                        <span class="col-lg-1 text-center delete">删除</span>
+                    </li>
+                    <li class="detail row">
+                        <span class="col-lg-5 text-center"><input type="checkbox"  class="single"><span class="stop">暂停</span> 六角螺栓 M8×10 (P1.25) 达力强 A2-70 洗白 100支/箱 </span>
+                        <span class="col-lg-1 text-center">现货</span>
+                        <span class="col-lg-1 text-center">3,000.00</span>
+                        <span class="col-lg-2 text-center max-number">
+                            <input type="number" placeholder="1.000"> 支
+                            <span>200支起订</span>
+                        </span>
+                        <span class="col-lg-2 text-center cailing">3,000.00</span>
+                        <span class="col-lg-1 text-center delete">删除</span>
+                    </li>
+                    <li id="counted-num">
+                        <button class="pull-right">立即下单</button>
+                        <span class="pull-right">货款合计：　<i class="orange"> 9.000.00</i>  元</span>
+                        <span class="pull-right">重量合计：　<i class="orange"> 52.800 </i>吨</span>
+                    </li>
+                </ul>
+                <div class="clear">
+                    <button class="btn btn-default">清空购物车</button>
+                    <button  class="btn btn-default">清空失效货物</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="items"><span>关于我们</span><span>法律声明</span><span>联系我们</span><span>友情链接</span></div>
+        <div>COPYRIGHT ©紧固E品 www.tianbao.com 湘ICP备11019553号   技术支持：湖南钢信</div>
+    </div>
+
+    <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+    <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+    <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script>
+        $(function(){
+            $('.top-tab li').on('click',function(){
+                $(this).addClass('active').siblings().removeClass('active')
+            })
+
+            //商品全选跟反选
+            $('.list-content').on('click','#all',function(){
+                var flag = $(this).prop('checked');
+                $('.single').prop('checked',flag);
+            })
+            $('.list-content').on('click','.single',function(){
+                var len = $('.single').length;
+
+                var checkLen = $('.single:checked').length;
+
+                if(len === checkLen){
+                    $('#all').prop('checked',true);
+                }else{
+                    $('#all').prop('checked',false);
+                }
+            })
+        })
+    </script>
+  </body>
+</html>

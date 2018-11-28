@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>Bootstrap 101 Template</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
+    <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="css/top.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        .progress1{
+            color: #ff6900;
+            background: url(images/progress1.jpg) no-repeat 130px top;
+            padding-right: 60px;
+        }
+       .progress1 .step{
+           display: inline-block;
+           width: 28px;
+           height: 28px;
+           line-height: 28px;
+           text-align: center;
+           background-color: transparent;
+           color: #fff;
+           border-radius: 50%;
+           margin-bottom: 6px;
+       }
+       .progress1>div{
+           margin-left: 58px;
+       }
+       .top-nav .order-info{
+           color: #ff6900;
+           font-weight: 700;
+           font-size: 16px;
+           padding: 32px 0 16px;
+           background: url(images/middle_03.jpg) no-repeat center 36px;
+       }
+       #container{
+           padding: 20px;
+           border: 1px solid #ddd;
+       }
+       #container .dot{
+           display: inline-block;
+           width: 18px;
+           height: 18px;
+           background-color: #bbbbbb;
+           text-align: center;
+           line-height: 18px;
+           color: #fff;
+           border-radius: 50%;
+           margin-right: 8px;
+       }
+       #container .dot1{
+           display: inline-block;
+           width: 18px;
+           height: 18px;
+           background: url(images/dot1.jpg) no-repeat center center;
+           position: relative;
+           top: 4px;
+           margin-right: 8px;
+       }
+       #container .head{
+           color: #4d525d;
+           font-size: 14px;
+           font-weight: 700;
+       }
+       #container .company{
+           font-size: 16px;
+           color: #4d525d;
+           margin-bottom: 24px;
+       }
+       #container .company div:last-child{
+           height: 40px;
+           line-height: 40px;
+           padding-bottom: 26px;
+           border-bottom: 1px dashed #e5e4e4;
+       }
+       #container .methods{
+           display: block;
+           margin-bottom: 20px;
+       }
+       #container .goods-list{
+           margin-bottom: 26px;
+       }
+       #container .goods-list .list-content{
+           border: 1px solid #ddd;
+       }
+       #container .seller  .list-content{
+           border: 1px solid #ddd;
+           overflow: hidden;
+           margin-bottom: 26px;
+       }
+       #container .seller  .list-content li:hover{
+         background-color: #f1f1f1;
+         cursor: pointer;
+       }
+       #container .seller>div:first-child{
+           margin-bottom: 26px;
+       }
+       #container .seller .list-content li{
+           height: 40px;
+           line-height: 40px;
+           font-size: 14px;
+           color: #4d525d;
+       }
+       #container .seller .list-content li:first-child{
+           font-size: 14px;
+           color: #1b1b1b;
+           border-bottom: 1px solid #ddd;
+           background-color: #f7f8f8;
+       }
+       #container .seller .list-content li:nth-child(2){
+           font-size: 14px;
+           color: #1b1b1b;
+           border-bottom: 1px dashed #ddd;
+
+       }
+       #container .seller .cailing{
+         color: #ff6900;
+       }
+       #container .seller .cailing span{
+           display: inline-block;
+           width: 48px;
+           height: 18px;
+           line-height: 18px;
+           text-align: center;
+           color: #ff6900;
+           border: 1px solid #ff6900;
+       }
+       #container .noted .head{
+           display: inline-block;
+           margin-bottom: 20px;
+       }
+       #container .noted textarea{
+           resize: none;
+           padding: 15px 0 0 10px;
+           box-sizing: border-box;
+           font-size: 14px;
+       }
+       .top-nav .logo{
+           padding-left: 15px;
+       }
+       .methods .username-phone{
+           margin-bottom: 10px;
+           padding-left: 15px;
+       }
+       .methods .save-cancel{
+           margin-left: 90px;
+       }
+       .methods .save-cancel button{
+           width: 100px;
+           height: 36px;
+           font-size: 14px;
+           font-weight: 700;
+       }
+       .methods .save-cancel .save{
+           color: #fff;
+           background-color: #ff6900;
+           border-color: #ff6900;
+           margin-right: 20px;
+       }
+       .methos .cancel{
+           color: #999999;
+       }
+       .methods>div:first-child{
+           margin-bottom: 25px;
+       }
+       .methods #username{
+           display: inline-block;
+           width: 360px;
+           margin-left: 16px;
+       }
+       .methods #phone{
+            display: inline-block;
+            width: 360px;
+            margin-left: 16px;
+        }
+        .methods .star{
+            margin-right: 4px;
+            color: #ff6900;
+        }
+        .methods .username-fa{
+            margin-right: 15px;
+            margin-bottom: 20px;
+        }
+        #input_province,#input_city,#input_area{
+            float: left;
+            width: 120px;
+            border-radius: 0;
+        }
+        .methods .address{
+            display: block;
+        }
+        .methods .address .control-label{
+            margin-right: 20px;
+        }
+        .methods #input_province {
+            border-right: 0;
+        }
+        .methods #input_city {
+           border-right: 0;
+        }
+        .methods #input_area{
+            
+        }
+        .methods .send-method{
+            margin-bottom: 25px;
+        }
+        .methods .send-method button{
+            width: 130px;
+            height: 36px;
+            font-size: 14px;
+            position: relative;
+            overflow: hidden;
+        }
+        .methods .send-method .delivery {
+            margin-right: 20px;
+        }
+        .methods .send-method button.active1{
+            color: #ff6900;
+        }
+        .methods .send-method button.active1::before{
+            content: '√';
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            background-color: #ff6900;
+            border-radius: 50%;
+            right: -20px;
+            bottom: -20px;
+            color: #fff;
+            box-sizing: border-box;
+            padding-right: 16px;
+            padding-top: 2px;
+        }
+        .counted{
+            width: 1180px;
+            margin: 0 auto;
+            height: 180px;
+            position: relative;
+        }
+        .counted .noted{
+            font-size: 14px;
+            color: #666666;
+            height: 30px;
+            line-height: 30px;
+        }
+        .counted .back{
+            position: absolute;
+            bottom: 0;
+            font-size: 14px;
+            color: #56aafd;
+        }
+        .counted .back i {
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            background: url(images/back_03.jpg) no-repeat;
+            position: relative;
+            top: 4px;
+        }
+        .counted .back span{
+        }
+        .counted button{
+            color: #fff;
+            width: 200px;
+            height: 36px;
+            line-height: 36px;
+            text-align: center;
+            background-color: #ff6900;
+            border: 0;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        .counted .one{
+            margin-right: 30px;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="wrap-top">
+        <div>
+            <div class="left pull-left">
+                <span class="login">登录</span>
+                <span class="regist">免费注册</span>
+            </div>
+            <div class="list right pull-right">
+                <span>微信商城</span>
+                <span>帮助中心</span>
+                <span>在线客服</span>
+                <span>客服热线:400-168-8888 ( 8 :00 - 17:00 )</span>
+            </div>
+        </div>
+    </div>
+    <div class="top-nav">
+        <div class="row">
+            <div class="logo left pull-left col-lg-6">
+                天宝
+            </div>
+            <div class="progress1 right pull-right col-lg-6">
+                <div class="left pull-right">
+                    <div class="step"></div>
+                    <div>我的购物车</div>
+                </div>
+                <div class="center pull-right text-center">
+                    <div class="step"></div>
+                    <div>填写核对订单信息</div>
+                </div>
+                <div class="right pull-right text-center">
+                    <div class="step"></div>
+                    <div>成功提交订单</div>
+                </div>
+            </div>
+        </div>
+        <div class="order-info text-center">填写并核对订单信息</div>
+    </div>
+    <div id="container">
+       <ul>
+           <li class="company clearfix">
+               <div>
+                   <span class="dot">1</span>
+                   <span class="head">公司抬头</span>
+               </div>
+               <div>湖南钢联贸易有限公司</div>
+           </li>
+           <li class="methods clearfix">
+               <div>
+                    <span class="dot">2</span>
+                    <span class="head">交货方式</span>
+               </div>
+               <div>
+                   <div class="send-method">
+                        <button type="button" class="btn btn-default delivery active1">卖家配送</button>
+                        <button type="button" class="btn btn-default self">用户自提</button>
+                   </div>
+                   <div>
+                       <ul class="username-phone row">
+                           <li class="username-fa pull-left">
+                                <label for="username"><i class="star">　*</i>收货人:</label>
+                                <input id="username" type="text" class="form-control" placeholder="Username" aria-describedby="sizing-addon1">
+                           </li>
+                           <li class="pull-left">
+                                <label for="phone"><i class="star">*</i>联系手机:</label>
+                                <input id="phone" type="number" class="form-control" placeholder="Phone" aria-describedby="sizing-addon1">
+                           </li>
+                       </ul>
+                       
+                   </div>
+                    <div class="address form-group">
+                        <label class="control-label pull-left"><i class="star">*</i>收货地址:</label>
+                        <div class="pull-left">
+                            <select name="input_province" id="input_province" class="form-control">
+                                <option value="">--请选择--</option>
+                            </select>
+                        </div>
+                        <div class="">
+                            <select name="input_city" id="input_city" class="form-control">
+                                <option value=""></option>
+                            </select>
+                        </div>
+                        <div class="">
+                            <select name="input_area" id="input_area" class="form-control">
+                                    <option value=""></option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="username-fa">
+                        <label for="username"><i class="star">　*</i>详细地址:</label>
+                        <input id="username" type="text" class="form-control" placeholder="请输入详细地址 (不包含重复市区镇 )" aria-describedby="sizing-addon1">
+                    </div>
+                    <div class="save-cancel">
+                        <button type="button" class="btn btn-default save">保存</button>
+                        <button type="button" class="btn btn-default cancel">取消</button>
+                    </div>
+               </div>
+               
+           </li>
+           <li class="goods-list">
+               <div>
+                    <span class="dot">3</span>
+                    <span class="head">商品清单</span>
+               </div>
+               <div>
+                    
+               </div>
+           </li>
+           <li class="seller">
+                <div>
+                     <span class="dot1"></span>
+                     <span class="head">卖方：湖南华菱电子商务有限公司</span>
+                </div>
+                <div class="list-content">
+                     <ul>
+                         <li class="row">
+                             <span class="col-lg-4 text-center">商品描述</span>
+                             <span class="col-lg-1 text-center">货期</span>
+                             <span class="col-lg-1 text-center">千支价</span>
+                             <span class="col-lg-3 text-center">采购数量</span>
+                             <span class="col-lg-2 text-center">金额小计</span>
+                             <span class="col-lg-1 text-center">操作</span>
+                         </li>
+                         <li class="row">
+                            <span class="col-lg-4 text-center">六角螺栓  M8×10 (P1.25) 达力强 A2-70 洗白 100支/箱 </span>                       
+                            <span class="col-lg-1 text-center">现货</span>
+                            <span class="col-lg-1 text-center">3,000.00</span>
+                            <span class="col-lg-2 text-center">1000 支</span>
+                            <span class="col-lg-3 text-center cailing"><span>拆零费</span> 3,000.00</span>
+                            <span class="col-lg-1 text-center delete">删除</span>
+                         </li>
+                         <li class="row">
+                            <span class="col-lg-4 text-center">六角螺栓  M8×10 (P1.25) 达力强 A2-70 洗白 100支/箱 </span>                       
+                            <span class="col-lg-1 text-center">现货</span>
+                            <span class="col-lg-1 text-center">3,000.00</span>
+                            <span class="col-lg-2 text-center">1000 支</span>
+                            <span class="col-lg-3 text-center cailing"><span>拆零费</span> 3,000.00</span>
+                            <span class="col-lg-1 text-center delete">删除</span>
+                         </li>
+                     </ul>
+                </div>
+            </li>
+            <li class="noted">
+                <div>
+                    <span class="head">添加订单备注</span>
+                    <textarea maxlength="60" name="" id="" cols="158" rows="2" placeholder="请填写本次交易需要卖家注意的信息"></textarea>
+               </div>
+            </li>
+       </ul>
+    </div>
+    <div class="counted">
+        <div class="pull-left back">
+            <span><i></i>　返回我的购物车</span>
+        </div>
+        <div class="pull-right noted">
+            <ul>
+                <li>
+                    <span class="one">商品金额：</span>
+                    <span>¥ 30000.00</span>
+                </li>
+                <li>
+                    <span class="one">运费：</span>
+                    <span>不含</span>
+                </li>
+                <li>
+                    <span class="one">拆零费：</span>
+                    <span>¥ 400.00</span>
+                </li>
+                <li>
+                    <span class="one">应付总额：</span>
+                    <span>¥ 3,000.00</span>
+                </li>
+                <li>
+                    <button>提交订单</button>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="items"><span>关于我们</span><span>法律声明</span><span>联系我们</span><span>友情链接</span></div>
+        <div>COPYRIGHT ©紧固E品 www.tianbao.com 湘ICP备11019553号   技术支持：湖南钢信</div>
+    </div>
+
+    <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+    <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+    <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="js/address.js"></script>
+    <script>
+        $(function () {
+            var html = "";
+            $("#input_city").append(html); $("#input_area").append(html);
+            $.each(pdata, function (idx, item) {
+                if (parseInt(item.level) == 0) {
+                    //html += "" + item.names + "";
+                    html += `<option value=${item.code} exid=${item.code}>${item.names}</option>`;
+                }
+            });
+            $("#input_province").append(html);
+
+            $("#input_province").change(function () {
+                if ($(this).val() == "") return;
+                $("#input_city option").remove(); $("#input_area option").remove();
+                var code = $(this).find("option:selected").attr("exid");code = code.substring(0, 2);
+                var html = "--请选择--"; $("#input_area").append(html);
+                $.each(pdata, function (idx, item) {
+                    if (parseInt(item.level) == 1 && code == item.code.substring(0, 2)) {
+                        //html += "" + item.names + "";
+                        html += `<option value=${item.names} exid=${item.code}>${item.names}</option>`;
+                    }
+                });
+                $("#input_city").append(html);
+            });
+
+            $("#input_city").change(function () {
+                if ($(this).val() == "") return;
+                $("#input_area option").remove();
+                var code = $(this).find("option:selected").attr("exid"); code = code.substring(0, 4);
+                var html = "--请选择--";
+                $.each(pdata, function (idx, item) {
+                    if (parseInt(item.level) == 2 && code == item.code.substring(0, 4)) {
+                        //html += "" + item.names + "";
+                        html += `<option value=${item.names}  exid=${item.code}>${item.names}</option>`;
+                    }
+                });
+                $("#input_area").append(html);
+            });
+
+            // 配送自提切换
+            $('.send-method').on('click','button',function(){
+                $(this).addClass('active1').siblings().removeClass('active1');
+            })
+
+            //删除当前商品
+            $('#container .seller  .list-content').on('click','.delete',function(){
+                $(this).parent().remove();
+            })
+            
+        });
+    </script>
+  </body>
+</html>

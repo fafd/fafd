@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>Bootstrap 101 Template</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
+    <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/top.css">
+    
+    <style>
+       #container .left-tab{
+           width: 180px;
+       }
+       #container .right-content{
+           height: 200px;
+           border: 1px solid #f1f1f1;
+           margin-left: 24px;
+           width: 976px;
+       }
+       #container .breadcrumb{
+           padding-left: 205px;
+       }
+       .top-tab .tab-content{
+           background:url(images/help-center.png) no-repeat;
+           background-size: 100% 100%;
+       }
+       .glyphicon-chevron-down{
+           color: #fff;
+       }
+       .panel-default>.panel-heading{
+           background-color:#d1e4f7;
+           border-color: #d1e4f7;
+           color: #fff;
+           font-size: 14px;
+       }
+       .panel-default>.panel-heading1{
+           background-color: #99c4ee;
+           border-color: #d1e4f7;
+           color: #fff;
+           font-size: 14px;
+       }
+       .panel-collapse>.panel-body{
+           background-color: #f6fbff;
+           border-color: #d1e4f7;
+           color: #4d525d;
+       }
+       .panel-collapse>.panel-body li{
+           height: 32px;
+           line-height: 32px;
+       }
+       .right-content{
+           padding: 15px;
+           color: #4d525d;
+           font-size: 14px;
+           line-height: 28px;
+       }
+       .right-content .pra1{
+           margin-bottom: 28px;
+       }
+       .right-content .pra2 li{
+           height: 60px;
+           line-height: 60px;
+       }
+    </style>
+  </head>
+  <body>
+    <div class="wrap-top">
+        <div>
+            <div class="left pull-left">
+                <span class="login">登录</span>
+                <span class="regist">免费注册</span>
+            </div>
+            <div class="list right pull-right">
+                <span>微信商城</span>
+                <span>帮助中心</span>
+                <span>在线客服</span>
+                <span>客服热线:400-168-8888 ( 8 :00 - 17:00 )</span>
+            </div>
+        </div>
+    </div>
+    <div class="top-nav row">
+        <div class="logo left pull-left col-lg-4">
+            天宝
+        </div>
+        <div class="right pull-right col-lg-8">
+            <div class="row cart">
+                <button type="button pull-right" class="cart-btn btn btn-default pull-right" aria-label="Left Align">
+                        <span class="" aria-hidden="true">购物车</span>
+                        <span class="num-dot">7</span>
+                </button>
+                <div class="input-group col-lg-6 pull-right">
+                    <input type="text" class="form-control" placeholder="请输入品名 材质 规格  钢厂等搜索,例如 : 冷轧卷1.0*1250C" aria-describedby="basic-addon2">
+                    <span class="input-group-addon" id="basic-addon2">搜索</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="top-tab">
+        <ul class="nav nav-pills">
+            <li role="presentation" class="active"><a href="#">全部商品分类</a></li>
+            <li role="presentation"><a href="#">首页</a></li>
+            <li role="presentation"><a href="#">现货商城</a></li>
+            <li role="presentation"><a href="#">在线订货</a></li>
+            <li role="presentation"><a href="#">行情资讯</a></li>
+        </ul>
+        <div class="tab-content">
+            
+        </div>
+    </div>
+    <div id="container">
+        <div class="row">
+            <ul class="breadcrumb">
+                <li>
+                    <a href="#">首页</a><span class="divider">></span>
+                </li>
+                <li>
+                    <a href="#">帮助中心</a><span class="divider">></span>
+                </li>
+                <li>
+                    <a href="#">平台规则</a><span class="divider">></span>
+                </li>
+            </ul>
+        </div>
+        <div class="row">
+            <div class="left-tab pull-left">
+                    <div class="panel-group" id="accordion">
+                            <div class="panel panel-default">
+                                <div class="panel-heading panel-heading1">
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordion" 
+                                           href="#collapseOne">
+                                            平台规则
+                                            <i class="glyphicon glyphicon-chevron-down pull-right"></i>
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapseOne" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordion" 
+                                           href="#collapseTwo">
+                                            买家指南
+                                            <i class="glyphicon glyphicon-chevron-down pull-right"></i>
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapseTwo" class="panel-collapse collapse in">
+                                    <div class="panel-body">
+                                        <ul>
+                                            <li>下订单</li>
+                                            <li>如何付款</li>
+                                            <li>如何提货</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordion" 
+                                           href="#collapseThree">
+                                            商家指南
+                                            <i class="glyphicon glyphicon-chevron-down pull-right"></i>
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapseThree" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <ul>
+                                            <li>申请入驻</li>
+                                            <li>资源上架</li>
+                                            <li>查订单</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordion" 
+                                            href="#collapseThree">
+                                            常见问题
+                                            <i class="glyphicon glyphicon-chevron-down pull-right"></i>
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapseThree" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <ul>
+                                            <li>下订单</li>
+                                            <li>如何付款</li>
+                                            <li>如何提货</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+            </div>
+            <div class="right-content pull-left clearfix">
+                <div>
+                    <div class="pra1">一、自取：积分商城兑换商品成功后，选择自取的用户可在任意工作时间带上手机到荷钢网公司总部领取商品。
+                       
+                       注意：为了保证您的账户安全，在领取时会向兑换手机账号发送验证码进行效验，请带上正确的兑换手机号.</div> 
+                        
+                    <div class="pra2"> 二、快递：积分商城兑换商品成功后，选择快递的用户您只需要等待我们发货邮寄即可，我们会尽快给您安排发货。
+                        <ul>
+                            <li>　1、京东购物卡以及百联安付宝卡由荷钢网直接发货，统一发顺丰快递，快递邮费到付。</li>
+                            <li>　2、京东购物卡以及百联安付宝卡有现货的情况下每周五进行统一发货，正常两周内发货；周五当天兑换的订单不发货，顺延到下个周五发货。</li>
+                            <li>　3、商品发货时间3-7天，如没有现货，客服人员会联系您。</li>
+                        </ul>
+                    </div>
+                            
+                    
+                            
+                    
+                            
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="items"><span>关于我们</span><span>法律声明</span><span>联系我们</span><span>友情链接</span></div>
+        <div>COPYRIGHT ©紧固E品 www.tianbao.com 湘ICP备11019553号   技术支持：湖南钢信</div>
+    </div>
+
+    <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+    <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+    <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script>
+        $(function(){
+            $('.top-tab li').on('click',function(){
+                $(this).addClass('active').siblings().removeClass('active')
+            })
+        })
+    </script>
+  </body>
+</html>

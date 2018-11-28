@@ -1,0 +1,43 @@
+@charset "utf-8";
+/*=========================Reset_start==========================*/
+body,h1,h2,h3,h4,h5,h6,div,p,dl,dt,dd,ol,ul,li,form,table,th,td,a,img,span,strong,var,em,input,textarea,select,option{margin: 0; padding: 0;}
+/* html,body{font-family:"宋体","微软雅黑",Arail,Tabhoma; font-size: 12px; text-align: left;} */
+ul,ol{list-style: none;}
+img{border: 0;}
+input,select,textarea{outline:0;}
+textarea{resize:none; overflow: auto;}
+table{border-collapse: collapse; border-spacing: 0;}
+th,strong,var,em{font-weight: normal; font-style: normal;}
+a{text-decoration: none;}
+
+/*==========================Reset_End===========================*/
+.ellipsis2{
+    width: 200px;
+    position:relative;
+    line-height:1.4em;
+    /* 3 times the line-height to show 3 lines */
+    height:4.2em;
+    overflow:hidden;
+}
+.ellipsis2::after {
+    content:"...";
+    font-weight:bold;
+    position:absolute;
+    bottom:0;
+    right:0;
+    padding:0 20px 1px 45px;
+    background:url(http://css88.b0.upaiyun.com/css88/2014/09/ellipsis_bg.png) repeat-y;
+    background: #fff;
+}
+
+/* .ellipsis1 {
+    width: 100px;
+    overflow : hidden;
+    display: -webkit-box;
+    display: -moz-box;
+    text-overflow: ellipsis;
+    -webkit-line-clamp:3;
+    -moz-line-clamp:3;
+    -webkit-box-orient: vertical;
+    border: 1px solid red;
+} */

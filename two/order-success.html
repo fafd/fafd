@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>Bootstrap 101 Template</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
+    <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="css/top.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        .progress1{
+            color: #ff6900;
+            background: url(images/progress1.jpg) no-repeat 130px top;
+            padding-right: 60px;
+        }
+       .progress1 .step{
+           display: inline-block;
+           width: 28px;
+           height: 28px;
+           line-height: 28px;
+           text-align: center;
+           background-color: transparent;
+           color: #fff;
+           border-radius: 50%;
+           margin-bottom: 6px;
+       }
+       .progress1>div{
+           margin-left: 58px;
+       }
+       .top-nav .order-info{
+           color: #ff6900;
+           font-weight: 700;
+           font-size: 16px;
+           padding: 16px 0;
+           background: url(images/middle_03.jpg) no-repeat center center;
+       }
+       #container{
+           padding: 20px;
+       }
+       #container .dot{
+           display: inline-block;
+           width: 18px;
+           height: 18px;
+           background-color: #bbbbbb;
+           text-align: center;
+           line-height: 18px;
+           color: #fff;
+           border-radius: 50%;
+           margin-right: 8px;
+       }
+       .top-nav .logo{
+           padding-left: 15px;
+       }
+       #container .jumu{
+           width: 285px;
+           margin: 180px auto 290px;
+       }
+       #container .jumu .confirm{
+           font-size: 22px;
+           color: #4d525d;
+           font-weight: 700;
+           height: 38px;
+           line-height: 38px;
+           width: 180px;
+            margin-bottom: 20px;           
+       }
+       #container .jumu .confirm .gou{
+           display: inline-block;
+           width: 38px;
+            height: 38px;
+            background: url(images/gou.jpg) no-repeat center center;
+       }
+       #container .jumu .confirm .gou+span{
+           position: relative;
+           top: -10px;
+           left: 10px;
+       }
+       #container .jumu .waiting{
+           color: #a0a0a0;
+           font-size: 14px;
+           line-height: 24px;
+           width: 285px;
+           margin-bottom: 30px; 
+       }
+       #container .jumu .selected{
+           width: 285px;
+       }
+       #container .jumu .selected button{
+           width: 130px;
+           height: 40px;
+           font-size: 14px;
+           font-weight: 700;
+       }
+       #container .jumu .selected .enter{
+           margin-right: 20px;
+       }
+       #container .jumu .selected .purchase{
+           border-color: #ff6900;
+           background-color: #ff6900;
+           color: #fff;
+       }
+    </style>
+  </head>
+  <body>
+    <div class="wrap-top">
+        <div>
+            <div class="left pull-left">
+                <span class="login">登录</span>
+                <span class="regist">免费注册</span>
+            </div>
+            <div class="list right pull-right">
+                <span>微信商城</span>
+                <span>帮助中心</span>
+                <span>在线客服</span>
+                <span>客服热线:400-168-8888 ( 8 :00 - 17:00 )</span>
+            </div>
+        </div>
+    </div>
+    <div class="top-nav">
+        <div class="row">
+            <div class="logo left pull-left col-lg-6">
+                天宝
+            </div>
+            <div class="progress1 right pull-right col-lg-6">
+                <div class="left pull-right">
+                    <div class="step"></div>
+                    <div>我的购物车</div>
+                </div>
+                <div class="center pull-right text-center">
+                    <div class="step"></div>
+                    <div>填写核对订单信息</div>
+                </div>
+                <div class="right pull-right text-center">
+                    <div class="step"></div>
+                    <div>成功提交订单</div>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="order-info text-center">填写并核对订单信息</div> -->
+    </div>
+    <div id="container">
+       <ul class="jumu">
+           <li class="confirm">
+               <span class="gou"></span>
+               <span>提交订单成功</span>
+           </li>
+           <li class="waiting">
+                请您等待卖方确认，确认后系统将通知您付款。
+                您可以在订单中心浏览订单处理状态。
+           </li>
+           <li class="selected">
+                <button type="button" class="btn btn-default enter">进入订单中心</button>
+                <button type="button" class="btn btn-default purchase">继续购买</button>
+           </li>
+       </ul>
+    </div>
+    <div class="footer">
+        <div class="items"><span>关于我们</span><span>法律声明</span><span>联系我们</span><span>友情链接</span></div>
+        <div>COPYRIGHT ©紧固E品 www.tianbao.com 湘ICP备11019553号   技术支持：湖南钢信</div>
+    </div>
+
+    <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+    <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+    <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script>
+        $(function(){
+            $('.top-tab li').on('click',function(){
+                $(this).addClass('active').siblings().removeClass('active')
+            })
+        })
+    </script>
+  </body>
+</html>

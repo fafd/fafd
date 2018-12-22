@@ -1,0 +1,131 @@
+.wrap-top{
+    height: 30px;
+    line-height: 30px;
+    background-color: #f2f2f2;
+    margin-bottom: 26px;
+}
+.wrap-top .login,.wrap-top .regist{
+    font-size: 12px;
+    color: #9fa0a0;
+}
+.wrap-top .login{
+    padding-right: 10px;
+    border-right: 1px solid #9fa0a0;
+}
+.wrap-top .regist{
+    padding-left: 10px;
+}
+.wrap-top .list span{
+    padding: 0 10px;
+    color: #9fa0a0;
+    border-right: 1px solid #9fa0a0;
+}
+.wrap-top .list span:last-child{
+    border-right: 0;
+}
+.wrap-top>div{
+    width: 1180px;
+    margin: 0 auto;
+}
+.top-nav{
+    width: 1180px;
+    margin: 0 auto;
+}
+.top-nav .logo{
+    font-size: 36px;
+    color: #ff6900;
+    font-weight: 700;
+    position: relative;
+    top: -12px;
+    padding-left: 0;
+}
+.top-nav .cart{
+    padding-right: 15px;
+    position: relative;
+}
+.top-nav .cart .cart-btn{
+    width: 100px;
+    margin-left: 20px;
+    background: url(../images/cart_03.png) no-repeat 10px center;
+    box-sizing: border-box;
+    padding-left: 15px;
+}
+.top-nav .cart .num-dot{
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    line-height: 16px;
+    text-align: center;
+    background-color: #ff6900;
+    color: #fff;
+    border-radius: 50%;
+    margin-left: 6px;
+    font-size: 12px;
+}
+.top-tab>.nav{
+    width: 1180px;
+    margin: 0 auto;
+}
+.top-tab .tab-content{
+    height: 180px;
+    background-color: pink;
+}
+.top-tab .nav-pills>li.active>a{
+    background-color:#ff6900;
+}
+#container{
+    width: 1180px;
+    margin: 0 auto;
+}
+
+.input-group .form-control{
+    width: 420px;
+    height: 32px;
+    border: 2px solid #ff6900;
+}
+.input-group-addon{
+    width: 90px;
+    height: 32px;
+    background-color: #ff6900;
+    border: 2px solid #ff6900;
+    color: #fff;
+    font-size: 14px;
+}
+.btn-default{
+    color: #9fa0a0;
+    font-size: 14px;
+}
+.nav-pills>li>a{
+    border-radius: 0;
+}
+.breadcrumb{
+    background-color: #fff;
+    margin-bottom: 15px;
+}
+.footer{
+    margin-top: 26px;
+    text-align: center;
+    font-size: 12px;
+    color: #898989;
+    background-color: #f6f6f6;
+    height: 80px;
+    box-sizing: border-box;
+    padding-top: 20px;
+}
+.footer .items{
+    margin-bottom: 12px;
+}
+.footer .items span{
+    padding: 0 12px;
+    border-right: 1px solid #898989;
+}
+.orange-b{
+    background-color: #ff6900;
+    color: #fff;
+}
+.orange{
+    color: #ff6900;
+}
+.blue{
+    color: #56aafd;
+}

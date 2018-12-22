@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>Bootstrap 101 Template</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/Font-Awesome/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="css/css/build.css"/>
+
+    <link href="css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
+
+    <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
+    <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="css/top.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        .progress1{
+            color: #ff6900;
+            background: url(images/progress1.jpg) no-repeat 130px top;
+            padding-right: 60px;
+        }
+       .progress1 .step{
+           display: inline-block;
+           width: 28px;
+           height: 28px;
+           line-height: 28px;
+           text-align: center;
+           background-color: transparent;
+           color: #fff;
+           border-radius: 50%;
+           margin-bottom: 6px;
+       }
+       .progress1>div{
+           margin-left: 58px;
+       }
+       .top-nav .order-info{
+           color: #ff6900;
+           font-weight: 700;
+           font-size: 16px;
+           padding: 32px 0 16px;
+           background: url(images/middle_03.jpg) no-repeat center 36px;
+       }
+       #container{
+           padding: 20px;
+       }
+       #container .dot{
+           display: inline-block;
+           width: 18px;
+           height: 18px;
+           background-color: #bbbbbb;
+           text-align: center;
+           line-height: 18px;
+           color: #fff;
+           border-radius: 50%;
+           margin-right: 8px;
+       }
+       #container .dot1{
+           display: inline-block;
+           width: 18px;
+           height: 18px;
+           background: url(images/dot1.jpg) no-repeat center center;
+           position: relative;
+           top: 4px;
+           margin-right: 8px;
+       }
+       #container .head{
+           color: #4d525d;
+           font-size: 14px;
+           font-weight: 700;
+       }
+       #container .company{
+           font-size: 16px;
+           color: #4d525d;
+           margin-bottom: 24px;
+       }
+       #container .company .sel_menu3_fa{
+           height: 80px;
+           background-color: #f7f8f8;
+            border: 1px solid #ddd;
+            margin-top: 20px;
+            padding-top: 22px;
+            box-sizing: border-box;
+            padding-left: 15px;
+       }
+       #container .company select{
+           width: 440px;
+           height: 36px;;
+       }
+       #container .methods{
+           display: block;
+           margin-bottom: 20px;
+           
+       }
+       #container .methods .methods-b{
+        border: 1px solid #ddd;
+       }
+       #container .goods-list{
+           margin-bottom: 26px;
+       }
+       #container .goods-list>div:first-child{
+           margin-bottom: 20px;
+       }
+       #container .goods-list>div:last-child{
+           width: 100%;
+           height: 76px;
+           background-color: #f7f8f8;
+           border: 1px solid #ddd;
+           padding: 20px 0 0 15px;
+           box-sizing: border-box;
+       }
+       #container .goods-list .line{
+           display: inline-block;
+           width: 20px;
+           height: 2px;
+           background-color: #ddd;
+           margin: 0 10px;
+       }
+       #container .seller  .list-content{
+           overflow: hidden;
+           margin-bottom: 26px;
+       }
+       #container .seller  .list-content li:hover{
+         background-color: #f1f1f1;
+         cursor: pointer;
+       }
+       #container .seller>div:first-child{
+           margin-bottom: 26px;
+       }
+       #container .seller .list-content li{
+           height: 65px;
+           line-height: 40px;
+           font-size: 14px;
+           color: #4d525d;
+           position: relative;
+       }
+       #container .seller .list-content .stop{
+           display: inline-block;
+           width: 30px;
+           height: 16px;
+           line-height: 16px;
+           text-align: center;
+           background-color: #56aafd;
+           color: #fff;
+           margin-right: 8px;
+           font-size: 12px;
+       }
+       #container .seller  .list-content input[type=checkbox]{
+           position: absolute;
+           width: 20px;
+           height: 20px;
+           left: 40px;
+           top: 5px;
+       }
+       #container .seller .list-content li:first-child{
+           height: 40px;
+           line-height: 40px;
+           background-color: #e2edf8;
+       }
+       #container .detail{
+           padding-top: 4px;
+           padding-left: 30px;
+           position: relative;
+       }
+       #container .detail .radio-info{
+           position: absolute;
+           top: -6px;
+           left: 15px;
+       }
+     
+       #container .seller .list-content li.detail:hover{
+           background-color: #f1f1f1;
+       }
+       #container .seller .list-content li.detail>span:first-child{
+           padding-left: 60px;
+       }
+       #container .seller .list-content li:first-child{
+           font-size: 14px;
+           color: #1b1b1b;
+           border-bottom: 1px solid #ddd;
+       }
+       #container .seller .list-content li:nth-child(2){
+           font-size: 14px;
+           color: #1b1b1b;
+           border-bottom: 1px dashed #ddd;
+
+       }
+       #container .seller .cailing{
+         color: #ff6900;
+       }
+       #container .seller .cailing span{
+           display: inline-block;
+           width: 48px;
+           height: 18px;
+           line-height: 18px;
+           text-align: center;
+           color: #ff6900;
+           border: 1px solid #ff6900;
+       }
+       #container .noted .head{
+           display: inline-block;
+           margin-bottom: 20px;
+       }
+       #container .noted textarea{
+           resize: none;
+           padding: 15px 0 0 10px;
+           box-sizing: border-box;
+           font-size: 14px;
+       }
+       .top-nav .logo{
+           padding-left: 15px;
+       }
+       .methods .username-phone{
+           margin-bottom: 10px;
+           padding-left: 15px;
+       }
+       .methods .save-cancel{
+           margin-left: 15px;
+       }
+       .methods .save-cancel div:first-child{
+           height: 40px;
+           line-height: 40px;
+       }
+       .methods .save-cancel button{
+           width: 100px;
+           height: 36px;
+           font-size: 14px;
+           font-weight: 700;
+       }
+       .methods .save-cancel .save{
+           color: #fff;
+           background-color: #ff6900;
+           border-color: #ff6900;
+           margin: 15px 0 15px 30px;
+       }
+       .methos .cancel{
+           color: #999999;
+       }
+       .methods>div:first-child{
+           margin-bottom: 25px;
+       }
+       .methods #username{
+           display: inline-block;
+           width: 360px;
+           margin-left: 16px;
+       }
+       .methods #phone{
+            display: inline-block;
+            width: 360px;
+            margin-left: 16px;
+        }
+        .methods .star{
+            margin-right: 4px;
+            color: #ff6900;
+        }
+        .methods .username-fa{
+            margin-right: 15px;
+            margin-bottom: 20px;
+        }
+        #input_province,#input_city,#input_area{
+            float: left;
+            width: 120px;
+            border-radius: 0;
+        }
+        .methods .address{
+            display: block;
+        }
+        .methods .address .control-label{
+            margin-right: 20px;
+        }
+        .methods #input_province {
+            border-right: 0;
+        }
+        .methods #input_city {
+           border-right: 0;
+        }
+        .methods #input_area{
+            
+        }
+        .methods .address{
+            height: 60px;
+            line-height: 60px;
+            padding-left: 15px;
+            border-bottom: 1px solid #dddddd;
+        }
+        .methods .address .orange{
+            margin-left: 110px;
+        }
+        .methods .send-method{
+            height: 40px;
+            border-bottom: 1px solid #dddddd;
+            background-color: #f7f8f8;
+            padding-top: 10px;
+            box-sizing: border-box;
+            padding-left: 15px;
+        }
+        .methods .send-method button{
+            width: 130px;
+            height: 36px;
+            font-size: 14px;
+            position: relative;
+            overflow: hidden;
+        }
+        .methods .send-method .delivery {
+            margin-right: 20px;
+        }
+        .methods .send-method button.active1{
+            color: #ff6900;
+        }
+        .methods .send-method button.active1::before{
+            content: '√';
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            background-color: #ff6900;
+            border-radius: 50%;
+            right: -20px;
+            bottom: -20px;
+            color: #fff;
+            box-sizing: border-box;
+            padding-right: 16px;
+            padding-top: 2px;
+        }
+        .counted{
+            width: 1180px;
+            margin: 0 auto;
+            height: 180px;
+            position: relative;
+        }
+        .counted .noted{
+            font-size: 14px;
+            color: #666666;
+            height: 30px;
+            line-height: 30px;
+        }
+        .counted .back{
+            position: absolute;
+            bottom: 0;
+            font-size: 14px;
+            color: #56aafd;
+        }
+        .counted .back i {
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            background: url(images/back_03.jpg) no-repeat;
+            position: relative;
+            top: 4px;
+        }
+        .counted .back span{
+        }
+        .counted button{
+            color: #fff;
+            width: 200px;
+            height: 36px;
+            line-height: 36px;
+            text-align: center;
+            background-color: #ff6900;
+            border: 0;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        .counted .one{
+            margin-right: 30px;
+        }
+        input[type=radio]{
+            outline: none!important;
+            border: none!important;
+        }
+        input[type=radio]:checked{
+            outline: none!important;
+            border: none!important;
+        }
+        #datetimeStart,#datetimeEnd{
+            width: 200px;
+            height: 36px;
+            background: url(images/time.jpg) no-repeat right 8px;
+            border: 1px solid #ddd;
+        }
+        .inputfile-fa input{
+            width: 320px;
+            height: 36px;
+            position: absolute;
+            padding-left: 10px;
+            border: 1px solid #ddd;
+        }
+        .inputfile-fa #inputfile{
+            position: static;
+            opacity: 0;
+            width: 320px;
+            height: 36px;
+        }
+        .inputfile-fa label{
+            width: 100px;
+            height: 36px;
+            line-height: 36px;
+            text-align: center;
+            color: #fff;
+            background-color: #ff6900;
+        }
+        .confirm{
+            display: inline-block;
+            background: url(images/surprize.jpg) no-repeat;
+            color: #898989;
+            font-size: 14px;
+            margin-left: 50px;
+            padding-left: 30px;
+        }
+        .orange-b{
+            width: 140px;
+            border: 0;
+            line-height: 35px;
+            text-align: center;
+            margin-top: 30px;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="wrap-top">
+        <div>
+            <div class="left pull-left">
+                <span class="login">登录</span>
+                <span class="regist">免费注册</span>
+            </div>
+            <div class="list right pull-right">
+                <span>微信商城</span>
+                <span>帮助中心</span>
+                <span>在线客服</span>
+                <span>客服热线:400-168-8888 ( 8 :00 - 17:00 )</span>
+            </div>
+        </div>
+    </div>
+    <div class="top-nav row">
+        <div class="logo left pull-left col-lg-4">
+            天宝
+        </div>
+        <div class="right pull-right col-lg-8">
+            <div class="row cart">
+                <button type="button pull-right" class="cart-btn btn btn-default pull-right" aria-label="Left Align">
+                        <span class="" aria-hidden="true">购物车</span>
+                        <span class="num-dot">7</span>
+                </button>
+                <div class="input-group col-lg-6 pull-right">
+                    <input type="text" class="form-control" placeholder="请输入品名 材质 规格  钢厂等搜索,例如 : 冷轧卷1.0*1250C" aria-describedby="basic-addon2">
+                    <span class="input-group-addon" id="basic-addon2">搜索</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="container">
+       <ul>
+           <li class="company clearfix">
+               <div>
+                   <span class="dot">1</span>
+                   <span class="head">卖家</span>
+               </div>
+               <div class="sel_menu3_fa">
+                    <select id="sel_menu3" class="js-data-example-ajax form-control">
+                        <option value="3620194" selected="selected">---请选择---</option>
+                        <option value="3620194" selected="selected">天宝（长沙）供应链服务有限公司</option>
+                    </select>
+               </div>
+           </li>
+           <li class="methods clearfix">
+               <div>
+                    <span class="dot">2</span>
+                    <span class="head">提货方式</span>
+               </div>
+               <div class="methods-b">
+                <div class="send-method">
+                    <div class="radio radio-info radio-inline">
+                        <input  type="radio" id="inlineRadio" value="option1" name="radioInline" checked>
+                        <label for="inlineRadio"> 配送 </label>
+                    </div>
+                    <div class="radio radio-info radio-inline">
+                        <input type="radio" id="inlineRadio1" value="option1" name="radioInline" checked>
+                        <label for="inlineRadio1"> 自提 </label>
+                    </div>
+                </div>
+                <div class="address">
+                    <span>收货信息：湖南省长沙市天心区先锋新宇一力物流园239号   王某某   13549663032</span>                                                                                                       
+                    <span class="orange">其他地址<i class="caret"></i></span>
+                </div>
+                <div class="save-cancel">
+                    <div><span class="head">收货地址管理:</span></div>
+                    <div class="list-content">
+                        <ul>                  
+                            <li class="detail row">
+                                <div class="col-lg-1 radio radio-info radio-inline">
+                                    <input type="radio" id="inlineRadio3" value="option1" name="radioInline">
+                                    <label for="inlineRadio3"></label>
+                                </div>
+                                <span class="col-lg-3 text-left ">湖南省长沙市宁乡县一力物流园238号</span>
+                                <span class="col-lg-1 text-left">现货</span>
+                                <span class="col-lg-2 text-left">18695468956</span>
+                                <span class="col-lg-2 text-left blue">修改</span>
+                            </li>
+                            <li class="detail row">
+                                <div class="col-lg-1 radio radio-info radio-inline">
+                                    <input type="radio" id="inlineRadio2" value="option1" name="radioInline">
+                                    <label for="inlineRadio2"></label>
+                                </div>
+                                <span class="col-lg-3 text-left ">湖南省长沙市宁乡县一力物流园238号</span>
+                                <span class="col-lg-1 text-left">现货</span>
+                                <span class="col-lg-2 text-left">18695468956</span>
+                                <span class="col-lg-2 text-left blue">修改</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <button type="button" class="btn btn-default save">新增地址</button>
+                </div> 
+               </div>
+               
+           </li>
+           <li class="goods-list">
+               <div>
+                    <span class="dot">3</span>
+                    <span class="head">交货期</span>
+                    <span class="confirm">具体交货期双方可协商确定 </span>
+               </div>
+               <div>
+                    <input size="16" type="text" id="datetimeStart" readonly class="form_datetime">
+                    <span class="line"></span>
+                    <input size="16" type="text" id="datetimeEnd" readonly class="form_datetime">
+               </div>
+           </li>
+           <li class="goods-list">
+                <div>
+                     <span class="dot">4</span>
+                     <span class="head">附件(技术标准)</span>
+                     <span class="confirm">不上传技术标准则默认按国标执行</span>
+                </div>
+                <div class="input-group inputfile-fa">
+                    <input class="pull-left show-text" type="text">
+                    <input class="pull-left" type="file" id="inputfile">
+                    <label class="pull-left" for="inputfile">附件上传</label>
+                </div>
+            </li>
+            <li class="noted">
+                <div>
+                    <span class="dot">5</span>
+                    <span class="head">订单备注</span>
+                    <span class="confirm">不上传技术标准则默认按国标执行</span>
+                    <textarea maxlength="60" name="" id="" cols="158" rows="2" placeholder="请输入订单其他要求（限100个汉字内）"></textarea>
+               </div>
+            </li>
+            <li class="clearfix">
+                <button type="button" class="btn btn-default orange-b pull-right">提交订单</button>
+            </li>
+       </ul>
+    </div>
+    <div class="footer">
+        <div class="items"><span>关于我们</span><span>法律声明</span><span>联系我们</span><span>友情链接</span></div>
+        <div>COPYRIGHT ©紧固E品 www.tianbao.com 湘ICP备11019553号   技术支持：湖南钢信</div>
+    </div>
+
+    <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+    <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+    <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- 日期插件 -->
+    <script type="text/javascript" src="js/bootstrap-datetimepicker.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="js/locales/bootstrap-datetimepicker.fr.js" charset="UTF-8"></script>
+
+    <script>
+        // select2组件参考地址
+        // https://www.cnblogs.com/landeanfen/p/5099332.html
+        // https://github.com/select2/
+        // https://select2.org/
+
+        $(function () {
+            //时间日期选择器
+            $("#datetimeStart").datetimepicker({
+                format: 'yyyy-mm-dd',
+                minView: 'month',
+                language: 'zh-CN',
+                autoclose: true,
+                startDate: new Date()
+            }).on("click", function () {
+                $("#datetimeStart").datetimepicker("setEndDate", $("#datetimeEnd").val())
+            });
+            $("#datetimeEnd").datetimepicker({
+                format: 'yyyy-mm-dd',
+                minView: 'month',
+                language: 'zh-CN',
+                autoclose: true,
+                startDate: new Date()
+            }).on("click", function () {
+                $("#datetimeEnd").datetimepicker("setStartDate", $("#datetimeStart".val()))
+            });
+
+
+
+            // 配送自提切换
+            $('.send-method').on('click','button',function(){
+                $(this).addClass('active1').siblings().removeClass('active1');
+            })
+
+            //删除当前商品
+            $('#container .seller  .list-content').on('click','.delete',function(){
+                $(this).parent().remove();
+            })
+
+            //文件上传
+            $('#inputfile').on('change',function(e){
+                //console.log(this.value)
+                $('.show-text').val(this.value);
+            })
+
+            //select2组件初始化
+            
+
+            
+        });
+    </script>
+  </body>
+</html>
